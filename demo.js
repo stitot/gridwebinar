@@ -1,6 +1,7 @@
 Grid.AST.allowedTags.push("input");
 Grid.AST.allowedAttributes.push("value");
 document.addEventListener('DOMContentLoaded', function () {
+  console.log(employeeData)
 Grid.grid("original_grid", {
   dataTable: {
     columns: employeeData,
