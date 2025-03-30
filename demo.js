@@ -54,6 +54,26 @@ const org_employeeData = {
   previousPerformance: [80, 70, 79, 69, 93, 82, 78, 50, 95, 90, 85, 80, 89, 70, 93, 70, 78, 50, 78, 90],
 };
 document.addEventListener('DOMContentLoaded', function () {
+const originalGrid = document.createElement("div");
+    originalGrid.id = "original_grid";
+    originalGrid.className = "container";
+
+    // Create the button
+    const button = document.createElement("button");
+    button.id = "button";
+    button.textContent = "Generate Chart";
+
+    // Create the chart container
+    const chartDiv = document.createElement("div");
+    chartDiv.id = "chart";
+    chartDiv.style.width = "100%";
+    chartDiv.style.height = "400px";
+
+    // Append them to the body in order
+    document.body.appendChild(originalGrid);
+    document.body.appendChild(button);
+    document.body.appendChild(chartDiv);
+  
 Grid.grid("original_grid", {
   dataTable: {
     columns: org_employeeData,
