@@ -11,7 +11,7 @@ Grid.grid("original_grid", {
     theme: "original-theme",
     rows: {
       //bufferSize: 10,
-      //strictHeights: true,
+      strictHeights: true,
       //minVisibleRows: 10,
       //virtualizationThreshold: 4,
       virtualization: true,
