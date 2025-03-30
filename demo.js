@@ -54,6 +54,9 @@ const org_employeeData = {
   previousPerformance: [80, 70, 79, 69, 93, 82, 78, 50, 95, 90, 85, 80, 89, 70, 93, 70, 78, 50, 78, 90],
 };
 document.addEventListener('DOMContentLoaded', function () {
+
+  const referenceElement = document.getElementById("our_grid");
+  
 const originalGrid = document.createElement("div");
     originalGrid.id = "original_grid";
     originalGrid.className = "container";
@@ -69,10 +72,13 @@ const originalGrid = document.createElement("div");
     chartDiv.style.width = "100%";
     chartDiv.style.height = "400px";
 
-    // Append them to the body in order
-    document.body.appendChild(originalGrid);
-    document.body.appendChild(button);
-    document.body.appendChild(chartDiv);
+    referenceElement.parentNode.insertBefore(originalGrid, referenceElement.nextSibling);
+
+    // Insert the button after originalGrid
+    originalGrid.parentNode.insertBefore(button, originalGrid.nextSibling);
+
+    // Insert the chart div after the button
+    button.parentNode.insertBefore(chartDiv, button.nextSibling);
   
 Grid.grid("original_grid", {
   dataTable: {
