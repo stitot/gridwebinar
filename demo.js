@@ -1,6 +1,6 @@
 Grid.AST.allowedTags.push("input");
 Grid.AST.allowedAttributes.push("value");
-
+document.addEventListener('DOMContentLoaded', function () {
 Grid.grid("original_grid", {
   dataTable: {
     columns: employeeData,
@@ -88,3 +88,4 @@ Grid.grid("original_grid", {
     },
   ],
 });
+)};
