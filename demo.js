@@ -55,7 +55,7 @@ const org_employeeData = {
 };
 document.addEventListener('DOMContentLoaded', function () {
 
-  const referenceElement = document.getElementById("myElement");
+  const referenceElement = document.getElementById("our_grid");
 
     // 1) Create the chart container
     const chartDiv = document.createElement("div");
