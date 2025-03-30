@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const button = document.createElement("button");
     button.id = "button";
     button.textContent = "Generate Chart";
+  button.addEventListener("click", createChart);
 
     // 3) Create the original grid
     const originalGrid = document.createElement("div");
