@@ -55,30 +55,34 @@ const org_employeeData = {
 };
 document.addEventListener('DOMContentLoaded', function () {
 
-  const referenceElement = document.getElementById("our_grid");
-  
-const originalGrid = document.createElement("div");
-    originalGrid.id = "original_grid";
-    originalGrid.className = "container";
+  const referenceElement = document.getElementById("myElement");
 
-    // Create the button
-    const button = document.createElement("button");
-    button.id = "button";
-    button.textContent = "Generate Chart";
-
-    // Create the chart container
+    // 1) Create the chart container
     const chartDiv = document.createElement("div");
     chartDiv.id = "chart";
     chartDiv.style.width = "100%";
     chartDiv.style.height = "400px";
+    chartDiv.textContent = "Chart placeholder...";
 
-    referenceElement.parentNode.insertBefore(originalGrid, referenceElement.nextSibling);
+    // 2) Create the button
+    const button = document.createElement("button");
+    button.id = "button";
+    button.textContent = "Generate Chart";
 
-    // Insert the button after originalGrid
-    originalGrid.parentNode.insertBefore(button, originalGrid.nextSibling);
+    // 3) Create the original grid
+    const originalGrid = document.createElement("div");
+    originalGrid.id = "original_grid";
+    originalGrid.className = "container";
+    originalGrid.textContent = "Original Grid content here...";
 
-    // Insert the chart div after the button
-    button.parentNode.insertBefore(chartDiv, button.nextSibling);
+    // Insert chart AFTER #myElement
+    referenceElement.parentNode.insertBefore(chartDiv, referenceElement.nextSibling);
+
+    // Insert button AFTER the chart
+    chartDiv.parentNode.insertBefore(button, chartDiv.nextSibling);
+
+    // Finally, insert original grid AFTER the button
+    button.parentNode.insertBefore(originalGrid, button.nextSibling);
   
 Grid.grid("original_grid", {
   dataTable: {
