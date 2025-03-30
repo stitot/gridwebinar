@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // 1) Create the chart container
     const chartDiv = document.createElement("div");
     chartDiv.id = "chart";
-    chartDiv.style.width = "100%";
-    chartDiv.style.height = "400px";
-    chartDiv.textContent = "Chart placeholder...";
+    //chartDiv.style.width = "100%";
+    //chartDiv.style.height = "400px";
+    //chartDiv.textContent = "Chart placeholder...";
 
     // 2) Create the button
     const button = document.createElement("button");
