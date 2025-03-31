@@ -45,7 +45,7 @@ button {
   padding: 10px;
 }
 
-#chart {
+#chart:not(:empty) {
    background: #d9ebe4;
    border-radius: 10px;
    border: 1px solid #6aa68c;
