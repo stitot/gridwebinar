@@ -50,6 +50,7 @@ button {
    border-radius: 10px;
    border: 1px solid #6aa68c;
    margin: 10px 20px;
+  padding-top: 10px;
 }
 
 button:hover {
