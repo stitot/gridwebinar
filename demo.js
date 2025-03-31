@@ -74,16 +74,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const originalGrid = document.createElement("div");
     originalGrid.id = "original_grid";
     originalGrid.className = "container";
-    originalGrid.textContent = "Original Grid content here...";
+    //originalGrid.textContent = "Original Grid content here...";
 
-    // Insert chart AFTER #myElement
-    referenceElement.parentNode.insertBefore(chartDiv, referenceElement.nextSibling);
+    // Insert the elements in the desired order, each AFTER the last one inserted:
+    // a) Insert button AFTER #myElement
+    referenceElement.parentNode.insertBefore(button, referenceElement.nextSibling);
 
-    // Insert button AFTER the chart
-    chartDiv.parentNode.insertBefore(button, chartDiv.nextSibling);
+    // b) Insert chart AFTER the button
+    button.parentNode.insertBefore(chartDiv, button.nextSibling);
 
-    // Finally, insert original grid AFTER the button
-    button.parentNode.insertBefore(originalGrid, button.nextSibling);
+    // c) Insert original grid AFTER the chart
+    chartDiv.parentNode.insertBefore(originalGrid, chartDiv.nextSibling);
   
 Grid.grid("original_grid", {
   dataTable: {
