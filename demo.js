@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     button.id = "button";
     button.textContent = "Generate Chart";
   button.addEventListener("click", function(){
-    chartDiv.style.width = "100%";
+    //chartDiv.style.width = "100%";
     chartDiv.style.height = "400px";
     createChart();
     
