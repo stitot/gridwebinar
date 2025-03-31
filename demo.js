@@ -53,6 +53,8 @@ const org_employeeData = {
   currentPerformance: [80, 69, 98, 71, 67, 82, 90, 50, 78, 90, 85, 82, 90, 71, 93, 82, 78, 50, 78, 90],
   previousPerformance: [80, 70, 79, 69, 93, 82, 78, 50, 95, 90, 85, 80, 89, 70, 93, 70, 78, 50, 78, 90],
 };
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
   const referenceElement = document.getElementById("our_grid");
@@ -68,7 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const button = document.createElement("button");
     button.id = "button";
     button.textContent = "Generate Chart";
-  button.addEventListener("click", createChart);
+  button.addEventListener("click", function(){
+    chartDiv.style.width = "100%";
+    chartDiv.style.height = "400px";
+    createChart();
+    
+  });
 
     // 3) Create the original grid
     const originalGrid = document.createElement("div");
