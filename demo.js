@@ -165,11 +165,11 @@ Grid.grid("original_grid", {
         formatter: function () {
           const currentValue = this.value;
           const previousValue = this.row.data.previousPerformance;
-          const color = currentValue < previousValue ? ["red", "↓"] : currentValue > previousValue ? ["green", "↑"] : ["", ""];
-          const attention = currentValue - previousValue < -10 ? "redder" : currentValue - previousValue > 10 ? "greener" : "";
+          const color = currentValue < previousValue ? ["red_org", "↓"] : currentValue > previousValue ? ["green_org", "↑"] : ["", ""];
+          const attention = currentValue - previousValue < -10 ? "redder_org" : currentValue - previousValue > 10 ? "greener_org" : "";
 
           const badge = `
-          <span class="performance ${color[0]} ${attention}">
+          <span class="performance_org ${color[0]} ${attention}">
             <span>${color[1]}</span>
             ${currentValue}
           </span>
