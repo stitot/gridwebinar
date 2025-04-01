@@ -152,7 +152,7 @@ Grid.grid("original_grid", {
       id: "salary",
       cells: {
         className: "hcg-right",
-        format: "${value:,.0f}",
+        format: "$ {value:,.0f}",
       },
     },
     {
