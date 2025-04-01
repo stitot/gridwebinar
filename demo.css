@@ -58,35 +58,35 @@ button:hover {
   color: black;
 }
 
-.performance {
+.performance_org {
   display: inline-flex;
   border-radius: 5px;
   padding: 3px 5px;
   border: 1px solid transparent;
 }
 
-.performance span {
+.performance_org span {
   width: 15px;
 }
 
-.red {
+.red_org {
   background: #fef3f2;
   color: #c10008;
   border-color: #c10008;
 }
 
-.green {
+.green_org {
   background: #effdf4;
   color: #008236;
   border-color: #008236;
 }
 
-.redder {
+.redder_org {
   background: #c10008;
   color: #fef3f2;
 }
 
-.greener {
+.greener_org {
   background: #008236;
   color: #effdf4;
 }
